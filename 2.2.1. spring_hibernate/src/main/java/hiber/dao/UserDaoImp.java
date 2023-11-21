@@ -1,9 +1,6 @@
 package hiber.dao;
 
-import hiber.model.Car;
 import hiber.model.User;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,7 +26,6 @@ public class UserDaoImp implements UserDao {
         return query.getResultList();
     }
 
-    //доделать
     @Override
     @SuppressWarnings("unchecked")
     public User getUserByCarModelAndSeries(String model, int series) {
